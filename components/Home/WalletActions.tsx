@@ -20,13 +20,13 @@ export function WalletActions() {
 
   async function sendTransactionHandler() {
   sendTransaction({
-      to: '0xCdcC45169fCbF6cEcC1931f3415978E3a6553ACd',
+      to: '0xF8f6f2a86cdABB8E0EcCe80991cB1D7D3086Ea0C',
       value: parseEther('0.000001'),
     })
   }
 
   // Adresse du contrat déployé
-  const contractAddress = '0xCdcC45169fCbF6cEcC1931f3415978E3a6553ACd'
+  const contractAddress = '0xF8f6f2a86cdABB8E0EcCe80991cB1D7D3086Ea0C'
 
   async function handleSend(message: string) {
     try {
@@ -34,10 +34,10 @@ export function WalletActions() {
         to: contractAddress,
         value: parseEther('0.000001'), // Montant ETH par vote
       })
-      alert(`Transaction ${message} envoyée !`)
+      alert(`Transaction ${message} sent!`)
     } catch (err) {
       console.error(err)
-      alert('Transaction échouée')
+      alert('Transaction failed')
     }
   }
   if (isConnected) {
